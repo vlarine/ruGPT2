@@ -9,10 +9,10 @@ python3 scripts/cleanup_dataset.py <input_file.txt> <output_file.json>
 ```
 2. Preprocess data for training:
 ```
-python3 scripts/split_gpt2_json.py
-    --input_files <input_file.json>
-    --output_dir <output_dir>
-    --test_percent 0.001
+python3 scripts/split_gpt2_json.py \
+    --input_files <input_file.json> \
+    --output_dir <output_dir> \
+    --test_percent 0.001 \
 ```
 3. Run training:
 ```
