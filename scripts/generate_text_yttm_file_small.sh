@@ -13,7 +13,7 @@ TEMP=0.9
 TOPK=0
 TOPP=0
 
-WORLD_SIZE=2 python3 generate_samples.py \
+WORLD_SIZE=1 CUDA_VISIBLE_DEVICES=0 python3 generate_samples.py \
        --model-parallel-size $MPSIZE \
        --num-layers $NLAYERS \
        --hidden-size $NHIDDEN \
