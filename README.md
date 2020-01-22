@@ -25,7 +25,7 @@ python3 scripts/split_gpt2_json.py \
 
 Model trained on 2x1080Ti with batch size 4:
 
-[166K steps](https://drive.google.com/open?id=1dw_UzN-ruUbkjU24zCBUJFsFe1iFiv1d)
+[166K steps (4,2G)](https://drive.google.com/open?id=1dw_UzN-ruUbkjU24zCBUJFsFe1iFiv1d)
 
 ## Generate text samples
 
