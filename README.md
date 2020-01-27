@@ -23,9 +23,23 @@ python3 scripts/split_gpt2_json.py \
 
 ## Download a pretrained model
 
-Model trained on 2x1080Ti with batch size 4:
+Model trained 320K steps on 2x1080Ti with batch size 4.
 
-[166K steps (4,2G)](https://drive.google.com/open?id=1dw_UzN-ruUbkjU24zCBUJFsFe1iFiv1d)
+Trainset is 30G wiki+taiga russian corpus.
+
+```
+------------------------------------------------------------------------------------
+ validation loss at iteration 320000 | LM loss: 3.285632E+00 | LM PPL: 2.672587E+01
+------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+ validation loss at the end of training for val data | LM loss: 3.306426E+00 | LM PPL: 2.728744E+01
+----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+ validation loss at the end of training for test data | LM loss: 3.369688E+00 | LM PPL: 2.906945E+01
+-----------------------------------------------------------------------------------------------------
+```
+
+[320K steps (4,2G)](https://drive.google.com/file/d/1hp21DmAoeq6tKoUGLEK8NtPRJVWdz_dH/view?usp=sharing)
 
 ## Generate text samples
 
