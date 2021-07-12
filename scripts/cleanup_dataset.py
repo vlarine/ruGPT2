@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 # Copyright (c) 2019, NVIDIA CORPORATION.  All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 import ftfy
 import json
 from langdetect import detect
@@ -21,6 +20,7 @@ import numpy as np
 import time
 import os
 import sys
+import codecs
 
 MIN_DOCUMENT_LENGHT = 128
 
@@ -53,7 +53,7 @@ def filter_corpus(filename, out_filename, print_interval=10000):
     chars_small_docs = 0
     start_time = time.time()
     with open(out_filename, 'wb') as f:
-        with open(filename, 'r') as fin:
+        with codecs.open(filename, 'r', encoding='utf-8') as fin:
             line_buffer = ''
             for line in fin:
                 try:
