@@ -25,6 +25,7 @@ import os
 import argparse
 import math
 import random
+import codecs
 
 parser = argparse.ArgumentParser('resplit loose json data into train/val/test')
 parser.add_argument('--input_files', nargs='+', required=True,
@@ -37,7 +38,7 @@ args = parser.parse_args()
 
 def get_lines(filepath):
     lines = []
-    with open(filepath, 'r') as f:
+    with codecs.open(filepath, 'r', encoding='utf-8') as f:
         for i, l in enumerate(f.readlines()):
             l = l.strip()
             lines.append(l)
@@ -92,7 +93,7 @@ def write_files(lines, mappings, filepaths):
 
 def write_file(lines, path):
     print('Writing:', path)
-    with open(path, 'w') as f:
+    with codecs.open(path, 'w', encoding='utf-8') as f:
         for l in lines:
             f.write(l+'\n')
 

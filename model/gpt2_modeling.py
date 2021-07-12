@@ -80,13 +80,14 @@ class GPT2Model(torch.nn.Module):
         self.embedding_dropout = torch.nn.Dropout(embedding_dropout_prob)
 
         # Transformer
-        self.transformer = mpu.GPT2ParallelTransformer(num_layers,
-                                                       hidden_size,
-                                                       num_attention_heads,
-                                                       attention_dropout_prob,
-                                                       output_dropout_prob,
-                                                       checkpoint_activations,
-                                                       checkpoint_num_layers)
+        self.transformer = mpu.GPT2ParallelTransformer(
+			num_layers,
+            hidden_size,
+            num_attention_heads,
+            attention_dropout_prob,
+            output_dropout_prob,
+            checkpoint_activations,
+            checkpoint_num_layers)
 
 
     def add_tokentype_embeddings(self, num_tokentypes):
